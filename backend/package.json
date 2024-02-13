@@ -1,0 +1,26 @@
+{
+  "name": "expres-app-test",
+  "version": "1.0.0",
+  "description": "quick express deployed api test",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "express",
+    "render",
+    "Rest",
+    "API",
+    "vite",
+    "postgres"
+  ],
+  "author": "KaptainCS3",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
+}
