@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function App() {
-  const url = "http://localhost:3000/url";
+  const url = "https://express-test-api-06xj.onrender.com/url";
   const [data, setData] = useState([]);
 
   const fetchData = async () => {
