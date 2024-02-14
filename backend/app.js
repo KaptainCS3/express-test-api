@@ -35,6 +35,16 @@ app.post("/url", async (req, res) => {
     res.status(500).json({ message: "Internal server error." });
   }
 });
+
+app.post("/user", async (req, res) =>{
+  const { name, age, location } = req.body
+  try {
+    console.log(`my name is ${name} and i am ${age} living in ${location}`)
+    res.json(`my name is ${name} and i am ${age} living in ${location}`)
+  } catch (error) {
+    console.error(error)
+  }
+})
 app.listen(3000, () => {
   console.log("Server running on port 3000");
 });
