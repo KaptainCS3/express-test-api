@@ -18,7 +18,7 @@ function App() {
     fetchData();
   }, []);
 
-const handleChange = (e) => {
+const handleChange = (e: { target: { name: string; value: string; }; }) => {
   const { name, value } = e.target;
     setUserData(prevUserData => ({
       ...prevUserData,
@@ -26,13 +26,13 @@ const handleChange = (e) => {
     }));
 }
 
-const handleSubmit = async (e) => {
-  e.preventDefaut()
+const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  e.preventDefault()
   try {
     const req = await fetch('https://express-test-api-06xj.onrender.com/user', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(setUserData)
+      body: JSON.stringify(userData)
     })
     const res = await req.json()
     console.log(res)
